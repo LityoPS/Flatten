@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 // Hugging Face Inference API configuration
 // Get your API token from: https://huggingface.co/settings/tokens
 const HF_API_TOKEN = process.env.HUGGINGFACE_API_TOKEN;
-const HF_MODEL = process.env.HUGGINGFACE_MODEL || 't5-small';
+const HF_MODEL = process.env.HUGGINGFACE_MODEL || 'lityops/synopsis-t5-summarizer';
 
 // Style-based generation parameters
 const STYLE_PARAMS = {
@@ -47,8 +47,11 @@ export async function POST(request: NextRequest) {
         const params = STYLE_PARAMS[style as keyof typeof STYLE_PARAMS];
 
         // Call Hugging Face Inference API
+        const url = `https://router.huggingface.co/models/${HF_MODEL}`;
+        console.log('Fetching URL:', url);
+
         const hfResponse = await fetch(
-            `https://router.huggingface.co/models/${HF_MODEL}`,
+            url,
             {
                 method: 'POST',
                 headers: {
