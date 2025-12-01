@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <title>Smart Filter Icon</title>
+
+  <rect 
+    x="1" y="1" width="22" height="22" 
+    rx="4" 
+    fill="#4f39f6"
+  />
+  
+  <rect 
+    x="4" y="6" width="16" height="2" 
+    rx="1" 
+    fill="#FFFFFF"
+  />
+  
+  <rect 
+    x="7" y="11" width="10" height="2" 
+    rx="1" 
+    fill="#FFFFFF"
+  />
+  
+  <rect 
+    x="10" y="16" width="4" height="2" 
+    rx="1" 
+    fill="#FFFFFF"
+  />
+</svg>
