@@ -44,7 +44,7 @@ export function Footer() {
                 <Link
                   key={`${item.name}-${index}`}
                   href={item.href}
-                  className="text-sm font-medium text-gray-500 dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:outline-none transition-colors whitespace-nowrap"
+                  className="text-sm font-medium text-gray-500 dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:outline-none whitespace-nowrap"
                 >
                   {item.name}
                 </Link>
@@ -54,7 +54,7 @@ export function Footer() {
               href="https://github.com/LityoPS/Abstractive-Text-Summarizer"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gray-900 dark:bg-gray-800 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors w-fit"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gray-900 dark:bg-gray-800 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-700 w-fit"
             >
               <span>View on GitHub</span>
               <svg

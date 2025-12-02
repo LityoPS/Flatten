@@ -29,7 +29,7 @@ export const SummaryOutput: React.FC<SummaryOutputProps> = ({ summary, isLoading
                     className="
                         w-full h-60 p-6 pr-14 rounded-lg
                         bg-white dark:bg-[#1c1c1c]
-                        border-2 border-gray-300 dark:border-[#404040]
+                        border border-gray-200 dark:border-gray-800
                         text-gray-900 dark:text-gray-100
                         placeholder-gray-400 dark:placeholder-gray-500
                         focus:outline-none

@@ -100,13 +100,13 @@ export default function History() {
                       ${expandedRowId === item.id ? 'bg-gray-50 dark:bg-gray-800/50' : ''}
                     `}
                   >
-                    <TableCell className="h-12 px-4 font-medium text-gray-500 dark:text-gray-400 max-w-[200px] truncate" title={item.inputText}>
+                    <TableCell className="h-12 px-4 font-medium text-gray-500 dark:text-gray-400 max-w-[200px] truncate">
                       {item.inputText}
                     </TableCell>
                     <TableCell className="h-14 px-4">
                       {getStyleBadge(item.style)}
                     </TableCell>
-                    <TableCell className="h-12 px-4 font-medium text-gray-500 dark:text-gray-400 max-w-[200px] truncate" title={item.summary}>
+                    <TableCell className="h-12 px-4 font-medium text-gray-500 dark:text-gray-400 max-w-[200px] truncate">
                       {item.summary}
                     </TableCell>
                     <TableCell className="h-14 px-4 text-right text-sm text-gray-500 dark:text-gray-400">

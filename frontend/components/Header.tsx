@@ -18,7 +18,7 @@ export const Header = () => {
 
   return (
     <div className="w-full sticky top-0 z-50 bg-white dark:bg-[#171717] border-b border-gray-200 dark:border-[#404040]">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
+      <nav className="container relative flex flex-wrap items-center justify-between p-3 mx-auto lg:justify-between xl:px-1">
         <div className="flex items-center lg:w-40">
           <Link href="/">
             <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-600 dark:text-gray-100">
