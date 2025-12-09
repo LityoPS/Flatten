@@ -75,6 +75,11 @@ export const Summarizer = () => {
                 throw new Error("No summary was generated. Please try again.");
             }
 
+            if (generatedSummary.trim() === "Please enter a longer text to summarize.") {
+                setError("Please enter a longer text to summarize.");
+                return;
+            }
+
             setSummary(generatedSummary);
 
             addHistoryItem({

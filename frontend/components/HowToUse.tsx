@@ -48,7 +48,7 @@ export const HowToUse = () => {
                             </p>
 
                             {index < steps.length - 1 && (
-                                <div className="hidden lg:block absolute top-1/2 -right-6.5 transform -translate-y-1/2">
+                                <div className="hidden lg:block absolute top-1/2 -right-8.5 transform -translate-y-1/2">
                                     <span className="text-3xl font-semibold text-gray-300 dark:text-gray-600">
                                         &gt;
                                     </span>
