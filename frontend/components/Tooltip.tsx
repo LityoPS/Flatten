@@ -4,6 +4,7 @@ import * as React from "react";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
@@ -39,6 +40,12 @@ interface TooltipProps {
 }
 
 export function Tooltip({ children, content, className, side = "top" }: TooltipProps) {
+    const isMobile = useIsMobile();
+
+    if (isMobile) {
+        return <>{children}</>;
+    }
+
     return (
         <TooltipProvider>
             <TooltipRoot delayDuration={200}>

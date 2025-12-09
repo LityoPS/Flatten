@@ -21,7 +21,7 @@ function getStyleBadge(style: HistoryItem['style']) {
       return (
         <Badge
           variant="outline"
-          className="border-0 bg-green-500/15 text-green-700 dark:bg-green-500/10 dark:text-green-400"
+          className="border-0 bg-green-500/15 text-green-700 dark:bg-green-500/10 dark:text-green-400 text-[10px] md:text-xs px-1.5 md:px-2 py-0.5"
         >
           Detailed
         </Badge>
@@ -30,7 +30,7 @@ function getStyleBadge(style: HistoryItem['style']) {
       return (
         <Badge
           variant="outline"
-          className="border-0 bg-yellow-500/15 text-yellow-700 dark:bg-yellow-500/10 dark:text-yellow-400"
+          className="border-0 bg-yellow-500/15 text-yellow-700 dark:bg-yellow-500/10 dark:text-yellow-400 text-[10px] md:text-xs px-1.5 md:px-2 py-0.5"
         >
           Standard
         </Badge>
@@ -39,7 +39,7 @@ function getStyleBadge(style: HistoryItem['style']) {
       return (
         <Badge
           variant="outline"
-          className="border-0 bg-red-500/15 text-red-700 dark:bg-red-500/10 dark:text-red-400"
+          className="border-0 bg-red-500/15 text-red-700 dark:bg-red-500/10 dark:text-red-400 text-[10px] md:text-xs px-1.5 md:px-2 py-0.5"
         >
           Harsh
         </Badge>
@@ -75,14 +75,14 @@ export default function History() {
 
   return (
     <Container>
-      <div className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1c1c1c]">
+      <div className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1c1c1c] overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow className="border-b border-gray-200 dark:border-gray-800 hover:bg-transparent">
-              <TableHead className="h-14 px-4 font-medium text-gray-900 dark:text-gray-200">Input Text</TableHead>
-              <TableHead className="h-14 px-4 font-medium text-gray-900 dark:text-gray-200">Style</TableHead>
-              <TableHead className="h-14 px-4 font-medium text-gray-900 dark:text-gray-200">Summary</TableHead>
-              <TableHead className="h-14 px-4 text-right font-medium text-gray-900 dark:text-gray-200">
+              <TableHead className="h-10 md:h-14 px-2 md:px-4 font-medium text-gray-900 dark:text-gray-200 text-xs md:text-sm">Input Text</TableHead>
+              <TableHead className="h-10 md:h-14 px-2 md:px-4 font-medium text-gray-900 dark:text-gray-200 text-xs md:text-sm">Style</TableHead>
+              <TableHead className="h-10 md:h-14 px-2 md:px-4 font-medium text-gray-900 dark:text-gray-200 text-xs md:text-sm">Summary</TableHead>
+              <TableHead className="h-10 md:h-14 px-2 md:px-4 text-right font-medium text-gray-900 dark:text-gray-200 text-xs md:text-sm">
                 Date
               </TableHead>
             </TableRow>
@@ -100,29 +100,29 @@ export default function History() {
                       ${expandedRowId === item.id ? 'bg-gray-50 dark:bg-gray-800/50' : ''}
                     `}
                   >
-                    <TableCell className="h-12 px-4 font-medium text-gray-500 dark:text-gray-400 max-w-[200px] truncate">
+                    <TableCell className="h-10 md:h-12 px-2 md:px-4 font-medium text-gray-500 dark:text-gray-400 max-w-[80px] md:max-w-[200px] truncate text-[10px] md:text-sm">
                       {item.inputText}
                     </TableCell>
-                    <TableCell className="h-14 px-4">
+                    <TableCell className="h-10 md:h-14 px-2 md:px-4">
                       {getStyleBadge(item.style)}
                     </TableCell>
-                    <TableCell className="h-12 px-4 font-medium text-gray-500 dark:text-gray-400 max-w-[200px] truncate">
+                    <TableCell className="h-10 md:h-12 px-2 md:px-4 font-medium text-gray-500 dark:text-gray-400 max-w-[80px] md:max-w-[200px] truncate text-[10px] md:text-sm">
                       {item.summary}
                     </TableCell>
-                    <TableCell className="h-14 px-4 text-right text-sm text-gray-500 dark:text-gray-400">
+                    <TableCell className="h-10 md:h-14 px-2 md:px-4 text-right text-[10px] md:text-sm text-gray-500 dark:text-gray-400">
                       {item.date}
                     </TableCell>
                   </TableRow>
                   {expandedRowId === item.id && (
                     <TableRow className="bg-gray-50/50 dark:bg-gray-800/30 hover:bg-gray-50/50 dark:hover:bg-gray-800/30">
-                      <TableCell colSpan={4} className="p-6">
-                        <div className="flex flex-col gap-4">
+                      <TableCell colSpan={4} className="p-3 md:p-6">
+                        <div className="flex flex-col gap-3 md:gap-4">
                           <div className="flex items-center justify-center">
                             <div className="flex bg-gray-200 dark:bg-gray-700 rounded-lg p-1 gap-1">
                               <button
                                 onClick={(e) => { e.stopPropagation(); setActiveTab('input'); }}
                                 className={`
-                                  w-32 py-1.5 text-xs font-medium rounded-md
+                                  w-20 md:w-32 py-1 md:py-1.5 text-[10px] md:text-xs font-medium rounded-md
                                   ${activeTab === 'input'
                                     ? 'bg-white dark:bg-gray-600 text-indigo-600 dark:text-white shadow-sm'
                                     : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}
@@ -133,7 +133,7 @@ export default function History() {
                               <button
                                 onClick={(e) => { e.stopPropagation(); setActiveTab('summary'); }}
                                 className={`
-                                  w-32 py-1.5 text-xs font-medium rounded-md
+                                  w-20 md:w-32 py-1 md:py-1.5 text-[10px] md:text-xs font-medium rounded-md
                                   ${activeTab === 'summary'
                                     ? 'bg-white dark:bg-gray-600 text-indigo-600 dark:text-white shadow-sm'
                                     : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}
@@ -149,29 +149,29 @@ export default function History() {
                               readOnly
                               value={activeTab === 'summary' ? item.summary : item.inputText}
                               className="
-                                w-full h-48 p-4 pr-14 rounded-lg
+                                w-full h-32 md:h-48 p-3 md:p-4 pr-10 md:pr-14 rounded-lg
                                 bg-white dark:bg-[#1c1c1c]
                                 border border-gray-200 dark:border-gray-700
                                 text-gray-900 dark:text-gray-100
                                 focus:outline-none resize-none
-                                font-normal text-sm leading-relaxed
+                                font-normal text-xs md:text-sm leading-relaxed
                               "
                             />
-                            <div className="absolute top-3 right-3">
+                            <div className="absolute top-2 md:top-3 right-2 md:right-3">
                               <Tooltip content="Copy to clipboard" side="left">
                                 <button
                                   onClick={(e) => handleCopy(activeTab === 'summary' ? item.summary : item.inputText, e)}
                                   className="
-                                    p-2 rounded-lg
+                                    p-1.5 md:p-2 rounded-lg
                                     bg-gray-100 dark:bg-gray-800
                                     hover:bg-gray-200 dark:hover:bg-gray-700
                                     text-gray-600 dark:text-gray-300
                                   "
                                 >
                                   {copied ? (
-                                    <CheckIcon className="w-4 h-4 text-green-500" />
+                                    <CheckIcon className="w-3 h-3 md:w-4 md:h-4 text-green-500" />
                                   ) : (
-                                    <ClipboardDocumentIcon className="w-4 h-4" />
+                                    <ClipboardDocumentIcon className="w-3 h-3 md:w-4 md:h-4" />
                                   )}
                                 </button>
                               </Tooltip>
@@ -187,7 +187,7 @@ export default function History() {
               <TableRow>
                 <TableCell
                   colSpan={4}
-                  className="h-24 text-center text-gray-500 dark:text-gray-400"
+                  className="h-16 md:h-24 text-center text-gray-500 dark:text-gray-400 text-xs md:text-base"
                 >
                   No history found. Start summarizing!
                 </TableCell>
