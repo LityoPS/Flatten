@@ -1,6 +1,6 @@
 # Flatten: Abstractive Text Summarizer
 
-This repository contains a full-stack application and model training resources for an abstractive text summarizer. It features a fine-tuned T5 model capable of generating summaries in different styles: Harsh (Concise), Standard, and Detailed.
+This repository contains a full-stack application and model training resources for an abstractive text summarizer. It features a fine-tuned T5 model capable of generating summaries in different styles: Harsh, Standard, and Detailed.
 
 ## Project Structure
 
