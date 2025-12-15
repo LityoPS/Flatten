@@ -1,6 +1,6 @@
 import { Tooltip } from "../Tooltip";
 
-type SummaryStyle = "harsh" | "standard" | "detailed";
+type SummaryStyle = "extreme" | "detailed";
 
 interface SummaryStyleSelectorProps {
   selectedStyle: SummaryStyle;
@@ -8,17 +8,11 @@ interface SummaryStyleSelectorProps {
 }
 
 const styleConfig = {
-  harsh: {
-    label: "Harsh",
+  extreme: {
+    label: "Extreme",
     tooltip: "Shortest - Get the core message in a few sentences",
     activeClass:
       "bg-red-600 dark:bg-red-400 text-white hover:bg-red-700 dark:hover:bg-red-500",
-  },
-  standard: {
-    label: "Standard",
-    tooltip: "Medium - Perfect balance of detail and brevity",
-    activeClass:
-      "bg-yellow-600 dark:bg-yellow-400 text-white hover:bg-yellow-700 dark:hover:bg-yellow-500",
   },
   detailed: {
     label: "Detailed",

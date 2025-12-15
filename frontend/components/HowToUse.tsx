@@ -12,7 +12,7 @@ export const HowToUse = () => {
             number: "2",
             title: "Adjust Style",
             description:
-                "Select your preferred summary style from the three options: Harsh for brevity, Standard for a middle ground, or Detailed for comprehensive coverage.",
+                "Select your preferred summary style from the two options: Extreme for brevity or Detailed for comprehensive coverage.",
         },
         {
             number: "3",

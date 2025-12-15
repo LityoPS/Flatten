@@ -26,22 +26,14 @@ function getStyleBadge(style: HistoryItem['style']) {
           Detailed
         </Badge>
       );
-    case 'standard':
-      return (
-        <Badge
-          variant="outline"
-          className="border-0 bg-yellow-500/15 text-yellow-700 dark:bg-yellow-500/10 dark:text-yellow-400 text-[10px] md:text-xs px-1.5 md:px-2 py-0.5"
-        >
-          Standard
-        </Badge>
-      );
-    case 'harsh':
+
+    case 'extreme':
       return (
         <Badge
           variant="outline"
           className="border-0 bg-red-500/15 text-red-700 dark:bg-red-500/10 dark:text-red-400 text-[10px] md:text-xs px-1.5 md:px-2 py-0.5"
         >
-          Harsh
+          Extreme
         </Badge>
       );
     default:

@@ -1,5 +1,5 @@
 interface SummaryStyleButtonProps {
-  style: "harsh" | "standard" | "detailed";
+  style: "extreme" | "detailed";
   selected: boolean;
   onClick: () => void;
 }
@@ -7,18 +7,11 @@ interface SummaryStyleButtonProps {
 import { Tooltip } from "../Tooltip";
 
 const styleConfig = {
-  harsh: {
-    label: "Harsh",
+  extreme: {
+    label: "Extreme",
     tooltip: "Shortest - Get the core message in a few sentences",
     selectedBg: "bg-red-600 dark:bg-red-400",
     selectedHover: "hover:bg-red-700 dark:hover:bg-red-500",
-    textColor: "text-white",
-  },
-  standard: {
-    label: "Standard",
-    tooltip: "Medium - Perfect balance of detail and brevity",
-    selectedBg: "bg-yellow-600 dark:bg-yellow-400",
-    selectedHover: "hover:bg-yellow-700 dark:hover:bg-yellow-500",
     textColor: "text-white",
   },
   detailed: {

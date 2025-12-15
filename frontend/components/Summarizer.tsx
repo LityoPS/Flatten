@@ -10,20 +10,19 @@ import { Client } from "@gradio/client";
 
 import { useHistory } from "@/hooks/useHistory";
 
-type SummaryStyle = 'harsh' | 'standard' | 'detailed';
+type SummaryStyle = 'extreme' | 'detailed';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://hiratax-t5-summarizer.hf.space";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "Hiratax/T5-Large-Summarizer";
 
 const STYLE_MAP: Record<SummaryStyle, string> = {
-    'harsh': 'Harsh (Concise)',
-    'standard': 'Standard',
-    'detailed': 'Detailed (Comprehensive)',
+    'extreme': 'Extreme',
+    'detailed': 'Detailed',
 };
 
 export const Summarizer = () => {
     const [inputText, setInputText] = useState("");
     const [summary, setSummary] = useState("");
-    const [selectedStyle, setSelectedStyle] = useState<SummaryStyle>('standard');
+    const [selectedStyle, setSelectedStyle] = useState<SummaryStyle>('extreme');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [modelStatus, setModelStatus] = useState<'loading' | 'ready' | 'error'>('loading');
@@ -50,6 +49,12 @@ export const Summarizer = () => {
     const handleSummarize = async () => {
         if (!inputText.trim()) {
             setError("Please enter some text to summarize");
+            return;
+        }
+
+        const wordCount = inputText.trim().split(/\s+/).length;
+        if (wordCount < 200) {
+            setError("Input must at least be 200 words long");
             return;
         }
 
