@@ -53,8 +53,8 @@ export const Summarizer = () => {
         }
 
         const wordCount = inputText.trim().split(/\s+/).length;
-        if (wordCount < 200) {
-            setError("Input must at least be 200 words long");
+        if (wordCount < 50) {
+            setError("Input must at least be 50 words long");
             return;
         }
 
