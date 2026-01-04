@@ -1,6 +1,6 @@
-# Flatten: Abstractive Text Summarizer
+# Flatten: Abstractive Style Summarizer
 
-This repository contains a full-stack application and model training resources for an abstractive text summarizer. It features a fine-tuned T5 model capable of generating summaries in different styles: Harsh, Standard, and Detailed.
+This repository contains a full-stack application and model training resources for an abstractive text summarizer. It features a fine-tuned T5 model capable of generating summaries in different styles: Harsh, Balanced, and Detailed.
 
 ## Project Structure
 
@@ -14,12 +14,16 @@ This repository contains a full-stack application and model training resources f
 
 You can test the summarizer directly on the deployed website: [flatten-ten.vercel.app](https://flatten-ten.vercel.app/)
 
+The backend live demo can be found here: [Hugging Face Space](https://huggingface.co/spaces/lityops/Abstractive-Style-Summarizer)
+
 ---
 
-## T5-Base Summarizer (Multi-Style)
+## T5-Base Abstractive Style Summarizer
 
-This model is a fine-tuned version of `google/flan-t5-base` trained on samples from CNN/DailyMail and XSum.
+This model is a fine-tuned version of `google/flan-t5-base` trained on samples from XSum, CNN/DailyMail and MultiNews.
 It generates summaries in three styles: **Harsh (Concise)**, **Balanced**, and **Detailed**.
+
+The model weights can be found here: [Hugging Face Model](https://huggingface.co/lityops/Abstractive-Style-Summarizer)
 
 ### Model Description
 - **Model Type**: Sequence-to-Sequence Transformer (T5)
