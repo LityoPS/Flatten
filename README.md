@@ -5,6 +5,7 @@ This repository contains a full-stack application and model training resources f
 ## Project Structure
 
 - **frontend/**: A Next.js web application that provides a user interface for the summarizer.
+- **backend/**: A Gradio space that provides an API for the summarizer.
 - **model/**: Contains Jupyter notebooks for training and inference experiments.
   - `train.ipynb`: Notebook used for fine-tuning the model.
   - `inference.ipynb`: Notebook for testing model inference.
@@ -18,28 +19,28 @@ You can test the summarizer directly on the deployed website: [flatten-ten.verce
 ## T5-Base Summarizer (Multi-Style)
 
 This model is a fine-tuned version of `google/flan-t5-base` trained on samples from CNN/DailyMail and XSum.
-It generates summaries in three styles: **Harsh (Concise)**, **Standard**, and **Detailed**.
+It generates summaries in three styles: **Harsh (Concise)**, **Balanced**, and **Detailed**.
 
 ### Model Description
 - **Model Type**: Sequence-to-Sequence Transformer (T5)
 - **Language**: English
 - **Base Model**: `google/flan-t5-base`
-- **Training Data**: ~9k mixed samples from CNN/DailyMail & XSum
+- **Training Data**: ~12k mixed samples from XSUM, CNN/DailyMail, and MultiNews
 
 ### Key Features
 This model supports a **Style Prompt** that determines summary length and density:
 
 1. **Harsh**
-   - Very concise
-   - Headline-like
-   - Trained mostly on XSum
+   - Very concise, headline-like summaries
+   - Trained with XSum
 
-2. **Standard**
-   - Balanced, general-purpose summarization
+2. **Balanced**
+   - Standard, general-purpose summaries
+   - Trained with CNN/DailyMail
 
 3. **Detailed**
    - Longer, more contextual summaries
-   - Trained with CNN/DailyMail
+   - Trained with MultiNews
 
 ---
 

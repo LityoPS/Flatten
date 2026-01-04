@@ -31,9 +31,9 @@ export function Footer() {
               </Link>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed lg:text-left">
-              Flatten is an Abstractive Text Summarization Website built with
+              Flatten is an Abstractive Text Style Summarization Website built with
               Next.js & TailwindCSS. It uses a fine-tuned Flan-T5 model to
-              generate summaries trained on the XSUM and CNN/Daily Mail
+              generate summaries trained on the XSUM, CNN/DailyMail and MultiNews
               datasets.
             </p>
           </div>

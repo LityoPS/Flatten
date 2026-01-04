@@ -1,6 +1,6 @@
 import { Tooltip } from "../Tooltip";
 
-type SummaryStyle = "extreme" | "detailed";
+type SummaryStyle = "Harsh" | "Balanced" | "Detailed";
 
 interface SummaryStyleSelectorProps {
   selectedStyle: SummaryStyle;
@@ -8,17 +8,29 @@ interface SummaryStyleSelectorProps {
 }
 
 const styleConfig = {
-  extreme: {
-    label: "Extreme",
+  Harsh: {
+    label: "Harsh",
     tooltip: "Shortest - Get the core message in a few sentences",
     activeClass:
-      "bg-red-600 dark:bg-red-400 text-white hover:bg-red-700 dark:hover:bg-red-500",
+      "bg-rose-500 text-white shadow-md ring-2 ring-rose-500 ring-offset-2 dark:ring-offset-[#1c1c1c]",
+    inactiveClass:
+      "text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-900/20",
   },
-  detailed: {
+  Balanced: {
+    label: "Balanced",
+    tooltip: "Standard - A happy medium between details and brevity",
+    activeClass:
+      "bg-amber-500 text-white shadow-md ring-2 ring-amber-500 ring-offset-2 dark:ring-offset-[#1c1c1c]",
+    inactiveClass:
+      "text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/20",
+  },
+  Detailed: {
     label: "Detailed",
     tooltip: "Comprehensive - Capturing more nuances",
     activeClass:
-      "bg-green-600 dark:bg-green-400 text-white hover:bg-green-700 dark:hover:bg-green-500",
+      "bg-emerald-500 text-white shadow-md ring-2 ring-emerald-500 ring-offset-2 dark:ring-offset-[#1c1c1c]",
+    inactiveClass:
+      "text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20",
   },
 };
 
@@ -27,16 +39,16 @@ export const SummaryStyleSelector: React.FC<SummaryStyleSelectorProps> = ({
   onSelect,
 }) => {
   return (
-    <div className="flex bg-gray-200 dark:bg-gray-700 rounded-lg p-1 gap-1">
+    <div className="flex bg-white dark:bg-zinc-900 rounded-xl p-1.5 gap-1.5 border border-gray-200 dark:border-zinc-800">
       {(Object.keys(styleConfig) as SummaryStyle[]).map((style) => (
         <Tooltip key={style} content={styleConfig[style].tooltip}>
           <button
             onClick={() => onSelect(style)}
             className={`
-              w-20 md:w-32 py-1.5 md:py-2 text-xs md:text-sm font-medium rounded-md
+              w-24 md:w-32 py-2 text-xs md:text-sm font-semibold rounded-lg
               ${selectedStyle === style
-                ? `${styleConfig[style].activeClass} shadow-sm`
-                : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
+                ? styleConfig[style].activeClass
+                : styleConfig[style].inactiveClass
               }
             `}
           >
