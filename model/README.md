@@ -8,4 +8,4 @@ Notebooks for training and evaluating the Abstractive Style Summarizer.
 - **ModelComparison.ipynb**: Benchmarking against other T5 models/baselines.
 - **ModelTraining.ipynb**: Fine-tuning `google/flan-t5-base` using LoRA.
 - **ModelInference.ipynb**: Testing model generation across styles.
-- **results**: Contains the fine-tuned adapter weights and configuration.
+- **results/**: Contains the fine-tuned adapter weights and configuration.
