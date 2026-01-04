@@ -1,6 +1,6 @@
 # Model Development
 
-Notebooks for training and evaluating the AbstractiveStyle Summarizer.
+Notebooks for training and evaluating the Abstractive Style Summarizer.
 
 ## Files
 - **EDA.ipynb**: Dataset exploration (XSum, CNN/DailyMail, MultiNews).
