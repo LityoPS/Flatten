@@ -6,15 +6,13 @@ This repository contains a full-stack application and model training resources f
 
 - **frontend/**: A Next.js web application that provides a user interface for the summarizer.
 - **backend/**: A Gradio space that provides an API for the summarizer.
-- **model/**: Contains Jupyter notebooks for training and inference experiments.
-  - `train.ipynb`: Notebook used for fine-tuning the model.
-  - `inference.ipynb`: Notebook for testing model inference.
+- **model/**: Contains Jupyter notebooks for Exploratory Data Analysis (EDA), training and inference experiments as well as the model weights.
 
 ## Live Demo
 
 You can test the summarizer directly on the deployed website: [flatten-ten.vercel.app](https://flatten-ten.vercel.app/)
 
-The backend live demo can be found here: [Hugging Face Space](https://huggingface.co/spaces/lityops/Abstractive-Style-Summarizer)
+The backend live demo can be found here: [huggingface.co/spaces/lityops/Abstractive-Style-Summarizer](https://huggingface.co/spaces/lityops/Abstractive-Style-Summarizer)
 
 ---
 
@@ -23,7 +21,7 @@ The backend live demo can be found here: [Hugging Face Space](https://huggingfac
 This model is a fine-tuned version of `google/flan-t5-base` trained on samples from XSum, CNN/DailyMail and MultiNews.
 It generates summaries in three styles: **Harsh (Concise)**, **Balanced**, and **Detailed**.
 
-The model weights can be found here: [Hugging Face Model](https://huggingface.co/lityops/Abstractive-Style-Summarizer)
+The model weights can be found here: [huggingface.co/lityops/Abstractive-Style-Summarizer](https://huggingface.co/lityops/Abstractive-Style-Summarizer)
 
 ### Model Description
 - **Model Type**: Sequence-to-Sequence Transformer (T5)
