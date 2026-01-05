@@ -75,8 +75,8 @@ footer {display: none !important;}
 
 with gr.Blocks() as demo:
   with gr.Column(elem_id="header"):
-    gr.Markdown("# Style Summarizer")
-    gr.Markdown("Fine-tuned Flan-T5 model for multi-style document summarization.")
+    gr.Markdown("# Abstractive Style Summarizer")
+    gr.Markdown("Fine-tuned Flan-T5 model for abstractive multi-style document summarization.")
 
   with gr.Row():
     with gr.Column(scale=1):
